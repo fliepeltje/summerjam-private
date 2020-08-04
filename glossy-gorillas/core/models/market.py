@@ -3,6 +3,7 @@ from django.utils.translation import gettext as _
 
 from core.models.product import Product
 from core.models.trader import InventoryRecord, Trader
+from core.querysets.market import ListingQuerySet
 
 
 class ListingStatus(models.TextChoices):
@@ -53,6 +54,8 @@ class Listing(models.Model):
         choices=ListingStatus.choices,
         default=ListingStatus.AVAILABLE,
     )
+
+    objects = ListingQuerySet.as_manager()
 
 
 class Trade(models.Model):
