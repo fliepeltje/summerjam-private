@@ -10,21 +10,23 @@ class TraderDashboard(DetailView):
         context = super().get_context_data(*args, **kwargs)
 
         context["listings"] = (
-            models.InventoryRecord.objects.filter(owner=self.object)
-            .exclude(listing__status=models.ListingStatus.FINALIZED)
+            models.Listing.objects.filter(item__owner=self.object)
+            .exclude(status=models.ListingStatus.FINALIZED)
             .values(
-                "product__name",
-                "quantity",
-                "quantity_type",
-                "listing__silver_per_unit",
-                "listing__barter_product",
-                "listing__barter_qty_per_unit",
-                "listing__allow_offers",
+                "item__product__name",
+                "item__quantity",
+                "item__quantity_type",
+                "silver_per_unit",
+                "barter_product",
+                "barter_qty_per_unit",
+                "allow_offers",
             )
         )
+
         context["inventory"] = models.InventoryRecord.objects.filter(
             owner=self.object
         ).values("product__name", "quantity", "quantity_type",)
+
         context["reviews"] = models.Review.objects.filter(
             trade__listing__item__owner=self.object
         ).values("rating", "description",)
