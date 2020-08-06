@@ -1,10 +1,13 @@
 # Glossy Gorillas
 
-| Discord ID    | Name      | Timezone  | Github        | Availability (UTC+0)  |
-|---            |---        |---        |---            |---                    |
-| Aka$$$        | Mihnea    | UTC+1     | mClejan       | 09:00 - later         |
-| donatas       | Donatas   | UTC+1     | fliepeltje    | 07:00 - 20:00         |
-| Eliot         | Eliot     | UTC+1     | NootNootEliot | 10:00 - 00:00         |
-| ligmitz       | Gaurav    | UTC+5.30  | ligmitz       | 04:30 - 15:30         |
-| mrfyda        | Rafael    | UTC+1     | mrfyda        | 16:00 - later         |
+| Discord ID | Name    | Timezone | Github        | Availability (UTC+0) |
+| ---------- | ------- | -------- | ------------- | -------------------- |
+| Aka$$$     | Mihnea  | UTC+1    | mClejan       | 09:00 - later        |
+| donatas    | Donatas | UTC+1    | fliepeltje    | 07:00 - 20:00        |
+| Eliot      | Eliot   | UTC+1    | NootNootEliot | 10:00 - 00:00        |
+| ligmitz    | Gaurav  | UTC+5.30 | ligmitz       | 04:30 - 15:30        |
+| mrfyda     | Rafael  | UTC+1    | mrfyda        | 16:00 - later        |
 
+
+# Meetings
+1. [2020-07-30 - 16:15 UTC + 1 - Agenda](meetings/2020_07_30.md)

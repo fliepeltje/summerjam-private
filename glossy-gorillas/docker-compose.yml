@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  web:
+    build: .
+    entrypoint: ./docker-entrypoint.sh
+    command: python manage.py runserver 0.0.0.0:8000
+    environment:
+      - DJANGO_DEBUG=False
+    ports:
+      - "8000:8000"
