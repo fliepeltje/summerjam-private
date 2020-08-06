@@ -2,10 +2,17 @@
 <br>
 {{ object.description }}
 
-{% for object in inventory %}
-<li>{{ object }}</li>
+<h2>Inventory</h2>
+{% for product in inventory %}
+<li>{{ product }}</li>
 {% endfor %}
 
-{% for object in listings %}
-<li>{{ object }}</li>
+<h2>Listing</h2>
+{% for listing in listings %}
+<li>{{ listing }}</li>
+{% endfor %}
+
+<h2>Reviews</h2>
+{% for review in reviews %}
+<li>{{ review }}</li>
 {% endfor %}
