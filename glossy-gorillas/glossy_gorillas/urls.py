@@ -21,7 +21,11 @@ from core import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("login/", auth_views.LoginView.as_view(template_name="core/login.html"), name="login"),
-    path('user/<int:pk>', views.UserDashboard.as_view()),
-    path('market/listings', views.ListingList.as_view()),
+    path(
+        "login/",
+        auth_views.LoginView.as_view(template_name="core/login.html"),
+        name="login",
+    ),
+    path("trader/<int:pk>", views.TraderDashboard.as_view()),
+    path("market/listings", views.ListingList.as_view()),
 ]

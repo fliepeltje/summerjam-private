@@ -3,6 +3,7 @@ from django.db import models
 from django.utils.translation import gettext as _
 
 from core.models.product import Product
+from core.querysets.trader import InventoryRecordQuerySet
 
 
 class QuantityType(models.TextChoices):
@@ -29,3 +30,5 @@ class InventoryRecord(models.Model):
     quantity_type = models.CharField(
         verbose_name=_("Quantity Type"), choices=QuantityType.choices, max_length=3
     )
+
+    objects = InventoryRecordQuerySet.as_manager()

@@ -1,5 +1,5 @@
 from django.db.models import QuerySet
 
 
-class ListingQuerySet(QuerySet):
+class InventoryRecordQuerySet(QuerySet):
     pass
