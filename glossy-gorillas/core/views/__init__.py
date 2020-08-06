@@ -1,5 +1,7 @@
 from .market import *  # noqa
 from .trader import *  # noqa
+from .register import *  # noqa
+
 from django.views.generic import TemplateView
 
 
