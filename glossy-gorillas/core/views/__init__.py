@@ -1,4 +1,5 @@
 from .market import *  # noqa
+from .review import *  # noqa
 from .trader import *  # noqa
 from django.views.generic import TemplateView
 
