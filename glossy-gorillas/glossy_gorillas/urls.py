@@ -20,8 +20,8 @@ from core.views import trader as trader_views, market as market_views, home as h
 from django.urls import reverse_lazy
 
 urlpatterns = [
-    path("", views.Home.as_view(), name="home"),
-    path("listings/", views.ListingList.as_view(), name="listings"),
+    path("", home_views.Home.as_view(), name="home"),
+    path("listings/", market_views.ListingList.as_view(), name="listings"),
     path("admin/", admin.site.urls),
     path(
         "login/",
@@ -33,5 +33,5 @@ urlpatterns = [
         auth_views.LogoutView.as_view(next_page=reverse_lazy("home")),
         name="logout",
     ),
-    path("dashboard/", views.TraderDashboard.as_view(), name="dashboard"),
+    path("dashboard/", trader_views.TraderDashboard.as_view(), name="dashboard"),
 ]
