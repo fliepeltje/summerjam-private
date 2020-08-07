@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
-from core import views
+from core.views import trader as trader_views, market as market_views, home as home_views
 from django.urls import reverse_lazy
 
 urlpatterns = [
