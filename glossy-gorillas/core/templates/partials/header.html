@@ -10,9 +10,9 @@
         </div>
 
         <div class="navbar-end">
-            <a class="navbar-item" href="#">
+            <div class="navbar-item">
                 {% if request.user.is_authenticated %}
-                <h2>Hello {{request.user.first_name }}</h2>
+                <h2 class="name">Hello {{request.user.first_name }}</h2>
                 <form method="POST" action={% url "logout" %}>
                     {% csrf_token %}
                     <button type="submit">Sign Out</button>
