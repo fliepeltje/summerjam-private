@@ -5,6 +5,17 @@
         <h1 style="font-size: xxx-large;">Home</h1>
     </center>
     <br>
+    <div>
+        <h2>The most popular product(s):</h2>
+        <ls>
+            {% for product in most_common %}
+                <li>
+                    {{ product.name }}
+                    {{ product.product_type }}
+                </li>
+            {% endfor %}
+        </ls>
+    </div>
     {% include "core/widgets/newest_listings.html" %}
     {% include "core/widgets/newest_trades.html" %}
 </div>

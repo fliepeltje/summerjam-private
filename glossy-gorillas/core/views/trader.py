@@ -22,16 +22,16 @@ class TraderDashboard(LoginRequiredMixin, DetailView):
                 "item__product__name",
                 "item__quantity",
                 "item__quantity_type",
-                "silver_per_unit",
+                "silver_price",
                 "barter_product",
-                "barter_qty_per_unit",
+                "barter_product_quantity",
                 "allow_offers",
             )
         )
 
         context["inventory"] = models.InventoryRecord.objects.filter(
             owner=self.object
-        ).values("product__name", "quantity", "quantity_type",)
+        ).values("id", "product__name", "quantity", "quantity_type", "listing__id")
 
         context["reviews"] = models.Review.objects.filter(
             trade__listing__item__owner=self.object

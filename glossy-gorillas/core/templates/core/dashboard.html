@@ -28,6 +28,14 @@
         <td class="item m">
             {{ product.quantity_type }}
         </td>
+        <td>
+          {% if product.listing__id %}
+            {{ record }}
+        {% else %}
+            {{ record }}
+            <a href="{% url 'listing-create' item_id=product.id %}" class="btn">List Item</a>
+        {% endif %}
+          </td>
     </tr>
     {% endfor %}
 </table>
